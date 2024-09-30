@@ -3,11 +3,71 @@ Speeduino incarnation based on ATMega2560 with some extra features.
 
 ## Main connectors
 
-| L |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   | R |
+| L | E | F | T |   |   |   |   |   |   |   |   | R | I | G | H | T |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | B8C | B7C | B6C | B5C | B4C | B3C | B2C | B1C |   | A8C | A7C | A6C | A5C | A4C | A3C | A2C | A1C |
 | B8B | B7B | B6B | B5B | B4B | B3B | B2B | B1B |   | A8B | A7B | A6B | A5B | A4B | A3B | A2B | A1B |
 | B8A | B7A | B6A | B5A | B4A | B3A | B2A | B1A |   | A8A | A7A | A6A | A5A | A4A | A3A | A2A | A1A |
+
+
+**Left connector (B)**
+
+| Pin | Signal | Function |
+| :---: | :---: | :--- |
+| B8C | PGND | Power ground |
+| B7C | COIL4 | Ignition coil 4 output |
+| B6C | COIL3 | Ignition coil 3 output |
+| B5C | COIL2 | Ignition coil 2 output |
+| B4C | COIL1 | Ignition coil 1 output |
+| B3C | +5V | 5V power output for sensors |
+| B2C | MAP | External MAP sensor input |
+| B1C | IAT | Inteke air temperature sensor input |
+| B8B | PGND | Power ground |
+| B7B | +9V | 9V power output for 2-wire ABS sensor |
+| B6B | - | Reserved |
+| B5B | - | Reserved |
+| B4B | - | Reserved |
+| B3B | AGND | Analogue ground for sensors |
+| B2B | CLT | Coolant temperature sensor input |
+| B1B | TPS | Throttle position sensor input |
+| B8A | 12V | 12V power input |
+| B7A | Clutch | Clutch sensor input |
+| B6A | LC5 | Universal low current output |
+| B5A | PUMP | Fuel pump relay control output |
+| B4A | FAN | Fan relay control output |
+| B3A | TACHO | Tachometer signal output |
+| B2A | O2 | External oxygen sensor input |
+| B1A | A15 | Universal analogue input |
+
+**Right connector (A)**
+
+| Pin | Signal | Function |
+| :---: | :---: | :--- |
+| A8C | INJ2 | Injector 2 output |
+| A7C | INJ1 | Injector 1 output |
+| A6C | IDLE | Idle PWM signal output |
+| A5C | HC1 | Universal high current output 1 |
+| A4C | FLEX | Flex fuel sensor input |
+| A3C | WB_HT | Wideband oxugen sensor heater control output |
+| A2C | WB_IA |  Wideband oxugen sensor IA signal |
+| A1C | CAM- | Camshaft position sensor negative input |
+| A8B | INJ4 | Injector 4 output |
+| A7B | INJ3 | Injector 3 output |
+| A6B | HC2 | Universal high current output 2 |
+| A5B | BOOST | Boost controler PWM signal output |
+| A4B | SPDO | Speedometer signal output |
+| A3B | WB_NE | Wideband oxugen sensor Nermest signal |
+| A2B | WB_IP | Wideband Oxugen sensor IP signal |
+| A1B | CAM+ | Camshaft position sensor positive input |
+| A8A | ST_A1 | Stepper motor output A1 |
+| A7A | ST_B1 | Stepper motor output B1 |
+| A6A | ST_B2 | Stepper motor output B2 |
+| A5A | ST_A2 | Stepper motor output A2 |
+| A4A | VSS | Vehicle speed sensor input |
+| A3A | WB_GN | Wideband oxugen sensor virtual ground |
+| A2A | CRANK- | Crankshaft position sensor negative input |
+| A1A | CRANK+ | Crankshaft position sensor positive input |
+
 
 ## Configuration jumpers
 
