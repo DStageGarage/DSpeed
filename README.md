@@ -64,7 +64,7 @@ Speeduino incarnation based on ATMega2560 with some extra features.
 | A6A | ST_B2 | Stepper motor output B2 |
 | A5A | ST_A2 | Stepper motor output A2 |
 | A4A | VSS | Vehicle speed sensor input |
-| A3A | WB_GN | Wideband oxugen sensor virtual ground |
+| A3A | WB_VG | Wideband oxugen sensor virtual ground |
 | A2A | CRANK- | Crankshaft position sensor negative input |
 | A1A | CRANK+ | Crankshaft position sensor positive input |
 
