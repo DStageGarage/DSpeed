@@ -66,10 +66,10 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 | A1A | CRANK+ | Crankshaft position sensor positive input |
 
 
-## Configuration jumpers
+## Configuration jumpers / potentiometers
 
 | ID | Function | Description |
-| :---: | :---: | --- |
+| :---: | :---: | :--- |
 | J1 | Ignition | Jumping 1-2 sets the cooil drivers voltage to 5V. Jumping 2-3 sets the cooil drivers voltage to 12V. For use with built-in ignition transistors (passive coils set witj J11-14) use of 12V may result in less heat dissipated in transistors although it may be case dependant and both settings will work. For active coils (set with J11-14) user has to know which input voltage is correct for them. |
 | J2 | O2    | Jumping 1-2 feeds the Speeduino with the external O2 Sensor input signal. Jumping 2-3 feeds the Speeduino with the signal from the built-in wide band oxygen sensor controler. |
 | J3 | Crank | Must be ON together with J6 when internal conditioner for Crank position sensor is used. Must be OFF together with J6 when external conditioner is used. |
@@ -86,4 +86,19 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 | J14 | Ignition | For COIL4 output. Jumping 1-2 sets the "passive coil" option meaning the output is controled with a built-in transistor. Jumping 2-3 sets the "active coil" option meaning a 5/12V (see J1 setting) logic signal at the output. |
 | J15 | Crank  | When ON the Crank- input is internally shortenned to ground. Should be ON when using VR sensor with internal conditioner and it is not grounded elswhere. |
 | J16 | Cam    | When ON the Cam- input is internally shortenned to ground. Should be ON when using VR sensor with internal conditioner and it is not grounded elswhere. |
+| PR1 | Crank  | Potentiometr for setting the threshold voltage for Crank position sensor using built-in conditioner. For VR sensor typically set to 0V (measured at test point TP1), for Hall sensor typically set to 2.5V. |
+| PR2 | Cam  | Potentiometr for setting the threshold voltage for Cam position sensor using built-in conditioner. For VR sensor typically set to 0V (measured at test point TP2), for Hall sensor typically set to 2.5V. |
+| PR3 | VVS  | Potentiometr for setting the threshold voltage for vehicle speed sensor. For VR sensor typically set to 0V (measured at test point TP3), for Hall sensor typically set to 2.5V. |
+
+## Internal connectors / modules
+
+| ID | Function | Description |
+| :---: | :---: | :--- |
+| P1 | Crank/Cam | External VR conditioner socket (together with P2). |
+| P2 | Crank/Cam | External VR conditioner socket (together with P1). |
+| P4 | WB | Programming connector for wideband oxygen sensor controler. |
+| M1 | MCU | Main MCU module - Arduino ATMega2560 Pro. |
+| M2 | Speedo | Module for speedometer control - Arduino Xiao. |
+| M3 | Step | Stepper motor driver module for idle control - DRV8825 or equivalent. |
+| BT | BT | Bluetooth communication module - HC-06. |
 
