@@ -1,6 +1,8 @@
 # DSpeed
 Speeduino incarnation based on ATMega2560 with some extra features.
 
+![DSpeed v1.3 render](Pictures/DStage_DSpeed_v1.3_render.png)
+
 ## Main connectors
 
 | L | E | F | T |   |   |   |   |   |   |   |   | R | I | G | H | T |
