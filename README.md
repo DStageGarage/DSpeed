@@ -5,6 +5,8 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 
 ## Main connectors
 
+![Main connectors](Pictures/DStage_DSpeed_v1.3_connectors.png)
+
 | L | E | F | T |   |   |   |   |   |   |   |   | R | I | G | H | T |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | B8C | B7C | B6C | B5C | B4C | B3C | B2C | B1C |   | A8C | A7C | A6C | A5C | A4C | A3C | A2C | A1C |
