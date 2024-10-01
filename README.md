@@ -1,5 +1,5 @@
 # DSpeed
-Speeduino incarnation based on ATMega2560 with some extra features.
+Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of the components. The MCU connections are based on Speedu v0.4.4d but there are differences in analogue and digital design and some extra features were added. 
 
 ![DSpeed v1.3 render](Pictures/DStage_DSpeed_v1.3_render.png)
 
