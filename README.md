@@ -7,13 +7,6 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 
 ![Main connectors](Pictures/DStage_DSpeed_v1.3_connectors.png)
 
-| L | E | F | T |   |   |   |   |   |   |   |   | R | I | G | H | T |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| B8C | B7C | B6C | B5C | B4C | B3C | B2C | B1C |   | A8C | A7C | A6C | A5C | A4C | A3C | A2C | A1C |
-| B8B | B7B | B6B | B5B | B4B | B3B | B2B | B1B |   | A8B | A7B | A6B | A5B | A4B | A3B | A2B | A1B |
-| B8A | B7A | B6A | B5A | B4A | B3A | B2A | B1A |   | A8A | A7A | A6A | A5A | A4A | A3A | A2A | A1A |
-
-
 **Left connector (B)**
 
 | Pin | Signal | Function |
