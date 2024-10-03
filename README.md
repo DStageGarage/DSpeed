@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> v1.3 is still a **DRAFT** and can change slightly, please do not use it yet.
-
 # DSpeed
 Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of the components. The MCU connections are based on Speedu v0.4.4d but there are differences in analogue and digital design and some extra features were added. 
 
@@ -69,7 +66,7 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 | A1A | CRANK+ | Crankshaft position sensor positive input |
 
 
-## Configuration jumpers / potentiometers
+## Configuration jumpers & potentiometers
 
 | ID | Function | Description |
 | :---: | :---: | :--- |
@@ -89,6 +86,7 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 | J14 | Ignition | For COIL4 output. Jumping 1-2 sets the "passive coil" option meaning the output is controled with a built-in transistor. Jumping 2-3 sets the "active coil" option meaning a 5/12V (see J1 setting) logic signal at the output. |
 | J15 | Crank  | When ON the Crank- input is internally shortenned to ground. Should be ON when using VR sensor with internal conditioner and it is not grounded elswhere. |
 | J16 | Cam    | When ON the Cam- input is internally shortenned to ground. Should be ON when using VR sensor with internal conditioner and it is not grounded elswhere. |
+| J17 | Idle  | Jumping 1-2 choses normal signal for stepper motor driver. Jumping 2-3 will change STEP signal to IDLE signal from the MCU. This option is to be used with a DStage ETC module (DBW). |
 | PR1 | Crank  | Potentiometr for setting the threshold voltage for Crank position sensor using built-in conditioner. For VR sensor typically set to 0V (measured at test point TP1), for Hall sensor typically set to 2.5V. |
 | PR2 | Cam  | Potentiometr for setting the threshold voltage for Cam position sensor using built-in conditioner. For VR sensor typically set to 0V (measured at test point TP2), for Hall sensor typically set to 2.5V. |
 | PR3 | VVS  | Potentiometr for setting the threshold voltage for vehicle speed sensor. For VR sensor typically set to 0V (measured at test point TP3), for Hall sensor typically set to 2.5V. |
