@@ -5,6 +5,9 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 
 ## Main connectors
 
+> [!CAUTION]
+> There should be an adequate fuse used on the main 12V power line for DSpeed. By default it should not exceed 2A and in case ETC module is used shouldn't be larger than 5A.
+
 ![Main connectors](Pictures/DStage_DSpeed_v1.3_connectors.png)
 
 **Left connector (B)**
@@ -102,4 +105,27 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 | M2 | Speedo | Module for speedometer control - Arduino Xiao. |
 | M3 | Step | Stepper motor driver module for idle control - DRV8825 or equivalent. |
 | BT | BT | Bluetooth communication module - HC-06. |
+
+## ETC module (DBW)
+Since it's unlikely that the vehicle will need Eleectronic Throttle (DBW) and idle stepper motor driver at the same time there is an option in DSeed PCB to use the stepper driver slot for special deditacet variant of DStage ETC. You will find the production files and other documents on [ETC repo](https://github.com/DStageGarage/ElectronicThrottleController/tree/main/ETC%20v2/v2.2).
+
+![DSpeed with ETC module](Pictures/DStage_DSpeed_v1.3_render_with_ETC.png)
+
+This is the mapping of main connector pins normally used for stepper motor driver for the ETC purposes:
+| Pin | Sig step | SIg ETC | Function |
+| :---: | :---: | :---: | :--- |
+| A8A | ST_A1 | MOT1 | Throttle motor connection 1 |
+| A7A | ST_B1 | MOT2 | Throttle motor connection 2 |
+| A6A | ST_B2 | TPS | Throttle position signal |
+| A5A | ST_A2 | ACC | Gas pedal position signal |
+- For the normal DSpeed TPS signal you can use either second position output from the throttle or from the gas pedal. Alternatively the same position signal as for ETC can be used although the input filter on DSpeed TPS input can interfear with ETC functionalituy so caution is recomended.
+- For powering the ETC sensors use the +5V and GND pins.
+- By default set J17 to "ETC" position (jumping 2-3).
+- The ETC motor should not drawmore than 3A, otherwise there may be a problem with the socket. It is a good idea to solder the ETC module directly to DSpeed PCB using longer goldpins.
+- There may be a problem with the USB caple hitting the ETC module. There are a few workarounds:
+    - use bluetooth for communication,
+    - solder ETC module directly to DSpeed PCB lower than the MCU module,
+    - use USB-UART converter connected via RX and TX pins dedicated for bluetooth module,
+    - solder USB cable directly to MCU module.
+- there is no separate power input for ETC module therefore the fuse used for entire DSpeed has to be adequate for the module use (max ETC current draw, usually not exceeding 2A for midsized throttles) + ~1A for DSpeed power.
 
