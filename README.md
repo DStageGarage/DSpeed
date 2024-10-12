@@ -112,7 +112,7 @@ Since it's unlikely that the vehicle will need Eleectronic Throttle (DBW) and id
 ![DSpeed with ETC module](Pictures/DStage_DSpeed_v1.3_render_with_ETC.png)
 
 This is the mapping of main connector pins normally used for stepper motor driver for the ETC purposes:
-| Pin | Sig step | SIg ETC | Function |
+| Pin | Sig step | Sig ETC | Function |
 | :---: | :---: | :---: | :--- |
 | A8A | ST_A1 | MOT1 | Throttle motor connection 1 |
 | A7A | ST_B1 | MOT2 | Throttle motor connection 2 |
@@ -121,11 +121,11 @@ This is the mapping of main connector pins normally used for stepper motor drive
 - For the normal DSpeed TPS signal you can use either second position output from the throttle or from the gas pedal. Alternatively the same position signal as for ETC can be used although the input filter on DSpeed TPS input can interfear with ETC functionalituy so caution is recomended.
 - For powering the ETC sensors use the +5V and GND pins.
 - By default set J17 to "ETC" position (jumping 2-3).
-- The ETC motor should not drawmore than 3A, otherwise there may be a problem with the socket. It is a good idea to solder the ETC module directly to DSpeed PCB using longer goldpins.
+- The ETC motor should not draw more than 3A, otherwise there may be a problem with the socket. It is a good idea to solder the ETC module directly to DSpeed PCB using long goldpins.
+- There is no separate power input for ETC module therefore the fuse used for entire DSpeed has to be adequate for the module use (max ETC current draw, usually not exceeding 2A for midsized throttles) + ~1A for DSpeed power, not larger than 5A.
 - There may be a problem with the USB caple hitting the ETC module. There are a few workarounds:
     - use bluetooth for communication,
     - solder ETC module directly to DSpeed PCB lower than the MCU module,
     - use USB-UART converter connected via RX and TX pins dedicated for bluetooth module,
     - solder USB cable directly to MCU module.
-- there is no separate power input for ETC module therefore the fuse used for entire DSpeed has to be adequate for the module use (max ETC current draw, usually not exceeding 2A for midsized throttles) + ~1A for DSpeed power.
 
