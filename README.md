@@ -129,3 +129,17 @@ This is the mapping of main connector pins normally used for stepper motor drive
     - use USB-UART converter connected via RX and TX pins dedicated for bluetooth module,
     - solder USB cable directly to MCU module.
 
+## Speedometer module
+Speedometer module is esentially Arduino Xiao. All other required HW is already present on DSpeed board.
+
+> [!NOTE]
+> SW for the speedometer module is not ready at the moment. It will be added once I have some time. If you need it please contact me at dstagegarage@gmail.com
+
+> [!TIP]
+> There is a standalone speedometer controller in my portfolio, please check [ABS2SPEED project](https://github.com/DStageGarage/ABS2SPEED)
+
+# Contact and other info
+
+- email: dstagegarage@gmail.com
+- YouTube: https://www.youtube.com/DStageGarage
+- Speeduino forum: https://speeduino.com/forum/index.php
