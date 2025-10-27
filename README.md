@@ -107,6 +107,8 @@ Speeduino ATMega2560 incarnation optimised for automated SMD assembly of most of
 | BT | BT | Bluetooth communication module - HC-06. |
 
 ## ETC module (DBW)
+Edit: this was not tested, recent trials with other flavour of my ETC show that the used bridge is most likely not great to put it midly. I'd rather recomend using a standalone ETC v1.3 or v2.2. 
+
 Since it's unlikely that the vehicle will need Eleectronic Throttle (DBW) and idle stepper motor driver at the same time there is an option in DSeed PCB to use the stepper driver slot for special deditacet variant of DStage ETC. You will find the production files and other documents on [ETC repo](https://github.com/DStageGarage/ElectronicThrottleController/tree/main/ETC%20v2/v2.2).
 
 ![DSpeed with ETC module](Pictures/DStage_DSpeed_v1.3_render_with_ETC.png)
@@ -123,7 +125,7 @@ This is the mapping of main connector pins normally used for stepper motor drive
 - By default set J17 to "ETC" position (jumping 2-3).
 - The ETC motor should not draw more than 3A, otherwise there may be a problem with the socket. It is a good idea to solder the ETC module directly to DSpeed PCB using long goldpins.
 - There is no separate power input for ETC module therefore the fuse used for entire DSpeed has to be adequate for the module use (max ETC current draw, usually not exceeding 2A for midsized throttles) + ~1A for DSpeed power, not larger than 5A.
-- There may be a problem with the USB caple hitting the ETC module. There are a few workarounds:
+- There may be a problem with the USB cable hitting the ETC module. There are a few workarounds:
     - use bluetooth for communication,
     - solder ETC module directly to DSpeed PCB lower than the MCU module,
     - use USB-UART converter connected via RX and TX pins dedicated for bluetooth module,
